@@ -1,0 +1,20 @@
+<h1>Answer Page...</h1>
+
+<% if @question.capitalize == 'I am going to work right now!' %>
+    <div>
+      <h1>Question is : <%= @question %> </h1>
+      <h3>Great!</h3>
+    </div>
+  <% elsif @question.end_with?('?') %>
+  <div>
+    <h1>Question is : <%= @question %> </h1>
+    <h3>Silly question, get dressed and go to work!</h3>
+  </div>
+    <% else %>
+<div>
+    <h1>Question is : <%= @question %> </h1>
+    <h3>I don't care, get dressed and go to work!</h3>
+</div>
+<% end %>
+
+<%= link_to "Ask a new question", "/ask" , class: "btn btn-primary mt-5"%>
